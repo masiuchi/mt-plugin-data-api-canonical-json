@@ -14,6 +14,15 @@ my $plugin = __PACKAGE__->new(
             'https://github.com/masiuchi/mt-plugin-data-api-canonical-json',
         description =>
             '<__trans phrase="The same object should always be stringified to the exact same string.">',
+
+        registry => {
+            l10n_lexicon => {
+                ja => {
+                    'The same object should always be stringified to the exact same string.'
+                        => 'Data API の出力する JSON のキーをソートして、出力を一意にします。',
+                },
+            },
+        },
     }
 );
 MT->add_plugin($plugin);
