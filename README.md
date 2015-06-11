@@ -1,2 +1,21 @@
-# mt-plugin-data-api-canonical-json
-The same object should always be stringified to the exact same string.
+# DataAPICanonicalJSON
+Data API の出力する JSON のキーをソートして、出力を一意にする Movable Type プラグイン
+
+## 具体例
+
+JSON オブジェクトのキーは順序が決まっていないので、
+
+> { "a": 1, "b": 2 }
+
+は、下記のように出力される場合があります。
+
+> { "b": 2, "a": 1 }
+
+本プラグインをインストールするとオブジェクトのキーがソートされて、常に下記の出力を得られます。
+
+> { "a": 1, "b": 2 }
+
+Data API のエンドポイント開発時に、出力確認のために使いました。
+
+## ライセンス
+MIT License
